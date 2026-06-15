@@ -3,9 +3,9 @@ spring:
     name: hospital-medicine-management
   
   datasource:
-    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:hospital_medicine}?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    username: ${DB_USERNAME:hospital}
-    password: ${DB_PASSWORD:hospital123}
+    url: jdbc:mysql://mysql-2112e609-pkppxttt2006-b808.e.aivencloud.com:26560/defaultdb?ssl-mode=REQUIRED&serverTimezone=UTC
+    username: avnadmin
+    password: AVNS_RbWGusqEnAzN1T3k8mo
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       maximum-pool-size: 10
