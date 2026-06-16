@@ -2,6 +2,10 @@
 
 Ứng dụng quản lý tủ thuốc bệnh viện với đầy đủ tính năng cho cả bệnh nhân và quản trị viên.
 
+## Live Demo
+- **Frontend URL:** [https://hospital-medicine-management.netlify.app](https://hospital-medicine-management.netlify.app)
+- **Backend API URL:** [https://hospital-medicine-management.onrender.com](https://hospital-medicine-management.onrender.com)
+
 ## Tech Stack
 
 ### Frontend
@@ -14,10 +18,11 @@
 ### Backend
 - **Framework**: Spring Boot 3.x
 - **Language**: Java 17+
-- **Database**: MySQL 8.0+
-- **Authentication**: JWT + Google OAuth2
+- **Database**: Cloud MySQL (Aiven)
+- **Authentication**: JWT + Google OAuth2 (Production Mode)
 - **Migration**: Flyway
 - **Containerization**: Docker
+- **Hosting / Deploy**: Render (Backend) & Netlify (Frontend)
 
 ## Features
 
@@ -40,6 +45,21 @@
 - Báo cáo xuất CSV/PDF
 - Cài đặt ngưỡng cảnh báo
 - Real-time notifications qua WebSocket
+
+---
+
+## 🔐 Test Accounts (Tài khoản thử nghiệm hệ thống)
+
+Để kiểm thử nhanh các phân quyền trên môi trường Live Demo hoặc Local, sử dụng các tài khoản sau:
+
+### 1. Quyền Quản trị viên (Admin)
+- **Email:** `admin@hospital.com`
+- **Mật khẩu:** `123456`
+
+### 2. Quyền Bệnh nhân (Patient)
+- Sử dụng chức năng **Đăng nhập bằng Google** trực tiếp bằng bất kỳ tài khoản Gmail cá nhân nào. Hệ thống tự động kích hoạt phân quyền `PATIENT` khi đăng nhập lần đầu thành công.
+
+---
 
 ## Setup
 
@@ -68,7 +88,8 @@ spring:
 3. Cấu hình Google OAuth:
 \`\`\`yaml
 google:
-  client-id: your-google-client-id
+  google:
+  client-id: your-google-client-id.apps.googleusercontent.com
 \`\`\`
 
 4. Chạy với Maven:

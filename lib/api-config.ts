@@ -1,7 +1,7 @@
 // API Configuration for Spring Boot Backend
 export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080/api"
 // Default WS_URL should include the backend context-path `/api` so handshake targets the correct endpoint
-export const WS_URL = process.env.NEXT_PUBLIC_WS_URL || "ws://localhost:8080/api/ws"
+export const WS_URL = process.env.NEXT_PUBLIC_WS_URL || "wss://hospital-medicine-management.onrender.com/api/ws"
 
 export const API_ENDPOINTS = {
   // Auth
