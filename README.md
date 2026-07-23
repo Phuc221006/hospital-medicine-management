@@ -153,7 +153,3 @@ npm run dev
 - \`PRESCRIPTION_UPDATE\` - Prescription status changed
 - \`APPOINTMENT_UPDATE\` - Appointment updated
 - \`NOTIFICATION\` - General notification
-
-## License
-
-MIT License
